@@ -279,7 +279,7 @@ module VagrantPlugins
         def generate_bridge_name
           @logger.debug 'generating name for bridge'
           count = 0
-          while lookup_bridge_by_name(bridge_name = "virbr#{count}")
+          while lookup_bridge_by_name(bridge_name = "bridge#{count}")
             count += 1
           end
           @logger.debug "found available bridge name #{bridge_name}"
